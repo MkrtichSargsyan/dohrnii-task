@@ -9,40 +9,51 @@
 import { ReactComponent as Dataset } from '../../assets/dataset.svg';
 import { ReactComponent as MarketPlace } from '../../assets/marketplace.svg';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import './carousel.css';
 import 'swiper/css';
+import { Line, LinesContainer } from './carousel-styles';
 
 function Slider() {
-  const sliderItemsData = [
+  const [active, setActive] = useState(0);
+  const [sliderItemsData] = useState([
     {
-      id: 1,
+      id: 0,
       title: 'Creating a dataset',
       desc: 'Using no-code tools, users can data harvest and data mine in a few simple steps. This enables them to create strong indicators and databases that can track any variable.',
       icon: <Dataset />,
       color: 'white',
     },
     {
-      id: 2,
+      id: 1,
       title: 'Creating a automated strategy',
       desc: 'Using logic blocks, users can build automated strategies without having to code. Simply adding blocks of logic in plain English, users have endless possibilities to explore.',
       icon: null,
       color: 'black',
     },
     {
-      id: 3,
+      id: 2,
       title: 'Deploying on the Marketplace',
       desc: 'Using the Dohrnii marketplace, users can deploy their content on a smart contract and easily distribute it while retaining ownership and ensuring monetisation.',
       icon: <MarketPlace />,
       color: 'white',
     },
-  ];
+  ]);
 
   return (
     <div className="container">
-      <Swiper slidesPerView={1.1} centeredSlides={true}>
+      <LinesContainer>
+        {sliderItemsData.map((el, i) => (
+          <Line key={i} className={`${i === active ? 'active' : null}`} />
+        ))}
+      </LinesContainer>
+      <Swiper
+        slidesPerView={1.1}
+        centeredSlides={true}
+        onSlideChange={(swiper) => setActive(swiper.activeIndex)}
+      >
         <div className="swiper-wrapper">
           {sliderItemsData.map((el) => (
             <SwiperSlide key={el.id}>

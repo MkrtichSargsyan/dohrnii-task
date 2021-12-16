@@ -22,5 +22,4 @@ export const Info = styled.p`
   font-size: 20px;
   line-height: 30px;
   text-align: center;
-  margin-bottom: 50px;
 `;

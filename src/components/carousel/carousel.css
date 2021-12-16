@@ -46,3 +46,7 @@
   font-size: 15px;
   line-height: 22px;
 }
+
+.active {
+  background-color: white !important;
+}
