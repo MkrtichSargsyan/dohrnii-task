@@ -1,5 +1,5 @@
 import React from 'react';
-import Carousel from '../components/carousel/carousel';
+import Slider from '../components/carousel/slider';
 import Footer from '../components/footer/footer';
 import Showcase from '../components/showcase/showcase';
 import Subscribe from '../components/subscribe/subscribe';
@@ -8,7 +8,7 @@ function MainPage() {
   return (
     <main>
       <Showcase />
-      <Carousel />
+      <Slider />
       <Subscribe />
       <Footer />
     </main>

@@ -1,0 +1,48 @@
+.container {
+  width: 380px;
+  margin: 0 auto;
+}
+
+.black_background {
+  background-color: black !important;
+  color: white !important;
+  border: 1px solid white !important;
+}
+
+.carousel_section {
+  text-align: center;
+}
+
+.carousel-item {
+  min-height: 300px !important;
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 13px;
+  border: none;
+}
+
+.carousel-item-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.carousel-item-title {
+  width: 150px;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: capitalize;
+  margin-bottom: 45px;
+}
+
+.carousel-item-icon {
+  display: flex;
+  justify-content: space-between;
+}
+
+.carousel-item-desc {
+  font-size: 15px;
+  line-height: 22px;
+}

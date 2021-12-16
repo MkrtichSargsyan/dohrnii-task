@@ -1,8 +1,6 @@
 import React from 'react';
 import {
   Info,
-  Line,
-  LinesContainer,
   ShowcaseContainer,
   Title,
 } from './showcase.styles';
@@ -18,11 +16,6 @@ function Showcase() {
         automated investment strategies and build powerful datasets to support
         their due diligence process.
       </Info>
-      <LinesContainer>
-        <Line />
-        <Line />
-        <Line />
-      </LinesContainer>
     </ShowcaseContainer>
   );
 }

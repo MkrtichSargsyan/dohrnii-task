@@ -24,14 +24,3 @@ export const Info = styled.p`
   text-align: center;
   margin-bottom: 50px;
 `;
-
-export const LinesContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
-
-export const Line = styled.span`
-  width: 70px;
-  height: 1px;
-  background-color: white;
-`;
