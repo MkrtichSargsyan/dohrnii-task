@@ -20,4 +20,23 @@ export const SidebarContainer = styled.section`
 export const SidebarMenuContainer = styled.div`
   display: flex;
   justify-content: space-between;
-`
+`;
+
+export const SidebarDataContainer = styled.div`
+  margin-top: 275px;
+  padding: 0 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+`;
+export const SidebarItem = styled.p`
+  text-align: end;
+  font-family: 'Bakbak One', cursive;
+  letter-spacing: 4px;
+  width: 230px;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 28px;
+  text-align: right;
+  margin-bottom: 40px;
+`;
