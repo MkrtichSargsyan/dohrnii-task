@@ -9,7 +9,7 @@
 import { ReactComponent as Dataset } from '../../assets/dataset.svg';
 import { ReactComponent as MarketPlace } from '../../assets/marketplace.svg';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import './carousel.css';
@@ -17,6 +17,7 @@ import 'swiper/css';
 import { Line, LinesContainer } from './carousel-styles';
 
 function Slider() {
+  const [swiper, setSwiper] = useState();
   const [active, setActive] = useState(0);
   const [sliderItemsData] = useState([
     {
@@ -50,13 +51,20 @@ function Slider() {
         ))}
       </LinesContainer>
       <Swiper
+        onInit={(swiper) => setSwiper(swiper)}
         slidesPerView={1.1}
         centeredSlides={true}
         onSlideChange={(swiper) => setActive(swiper.activeIndex)}
       >
         <div className="swiper-wrapper">
           {sliderItemsData.map((el) => (
-            <SwiperSlide key={el.id}>
+            <SwiperSlide
+              key={el.id}
+              onClick={(e) => {
+                swiper.slideTo(1);
+                setActive(1);
+              }}
+            >
               <article
                 style={{ width: 330 }}
                 className={`carousel-item swiper-slide
