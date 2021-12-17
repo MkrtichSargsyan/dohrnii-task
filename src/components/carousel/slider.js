@@ -1,20 +1,15 @@
-// import {
-//   CarouselItem,
-//   CarouselItemIcon,
-//   CarouselItemTitle,
-//   CarouselItemTitleContainer,
-//   Line,
-//   LinesContainer,
-// } from './carousel-styles';
+import React, { useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 import { ReactComponent as Dataset } from '../../assets/dataset.svg';
 import { ReactComponent as MarketPlace } from '../../assets/marketplace.svg';
+import { ReactComponent as WhitePaperIcon } from '../../assets/whitePaperIcon.svg';
 
-import React, { useEffect, useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
 
 import './carousel.css';
 import 'swiper/css';
-import { Line, LinesContainer } from './carousel-styles';
+
+import { Line, LinesContainer, WhitePaperBtn } from './carousel-styles';
 
 function Slider() {
   const [swiper, setSwiper] = useState();
@@ -81,6 +76,11 @@ function Slider() {
           ))}
         </div>
       </Swiper>
+
+      <WhitePaperBtn>
+        <WhitePaperIcon />
+        <span>Read Our WhitePaper</span>
+      </WhitePaperBtn>
     </div>
   );
 }
