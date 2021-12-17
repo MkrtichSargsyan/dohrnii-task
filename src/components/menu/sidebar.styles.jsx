@@ -23,7 +23,7 @@ export const SidebarMenuContainer = styled.div`
 `;
 
 export const SidebarDataContainer = styled.div`
-  margin-top: 275px;
+  margin-top: 240px;
   padding: 0 45px;
   display: flex;
   flex-direction: column;
@@ -39,4 +39,29 @@ export const SidebarItem = styled.p`
   line-height: 28px;
   text-align: right;
   margin-bottom: 40px;
+`;
+
+export const SidebarButtonContainer = styled.div`
+  margin-top: 100px;
+  padding-right: 45px;
+  display: flex;
+  justify-content: end;
+`;
+
+export const SidebarButton = styled.button`
+  background-color: transparent;
+  width: 170px;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 5px;
+`;
+
+export const SidebarButtonText = styled.p`
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 19px;
+  text-align: right;
+  color: white;
+  padding: 4px;
 `;

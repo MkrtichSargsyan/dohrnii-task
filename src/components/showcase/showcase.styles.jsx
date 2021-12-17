@@ -13,6 +13,7 @@ export const Title = styled.h1`
   text-transform: uppercase;
   font-family: 'Bakbak One', cursive;
   letter-spacing: 4px;
+  letter-spacing: 4px;
   margin-bottom: 60px;
 `;
 

@@ -1,6 +1,9 @@
 import React from 'react';
 import { LogoContainer, MenuContainer } from '../header/header.styles';
 import {
+  SidebarButton,
+  SidebarButtonContainer,
+  SidebarButtonText,
   SidebarContainer,
   SidebarDataContainer,
   SidebarItem,
@@ -8,7 +11,7 @@ import {
 } from './sidebar.styles';
 
 import { ReactComponent as Logo } from '../../assets/logo.svg';
-import { ReactComponent as MenuIcon } from '../../assets/menu.svg';
+import { ReactComponent as ClosingIcon } from '../../assets/x.svg';
 
 import { SIDEBAR_DATA } from './sidebar-data';
 
@@ -20,7 +23,7 @@ function Menu() {
           <Logo />
         </LogoContainer>
         <MenuContainer to={'/'}>
-          <MenuIcon />
+          <ClosingIcon />
         </MenuContainer>
       </SidebarMenuContainer>
       <SidebarDataContainer>
@@ -28,6 +31,11 @@ function Menu() {
           <SidebarItem key={i}>{el}</SidebarItem>
         ))}
       </SidebarDataContainer>
+      <SidebarButtonContainer>
+        <SidebarButton>
+          <SidebarButtonText>INVESTORS DASHBOARD</SidebarButtonText>
+        </SidebarButton>
+      </SidebarButtonContainer>
     </SidebarContainer>
   );
 }
