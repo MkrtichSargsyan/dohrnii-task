@@ -50,3 +50,12 @@
 .active {
   background-color: white !important;
 }
+
+@media (max-width: 400px) {
+  .container {
+    width: 330px;
+  }
+  .carousel-item {
+    width: 280px !important;
+  }
+}

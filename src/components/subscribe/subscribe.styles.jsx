@@ -24,7 +24,7 @@ export const SubscribeSubTitle = styled.p`
 `;
 
 export const EmailFieldContainer = styled.div`
-margin-top: 25px;
+  margin-top: 25px;
   position: relative;
 `;
 
@@ -40,6 +40,10 @@ export const EmailField = styled.input`
 
   &::placeholder {
     color: white;
+  }
+
+  @media (max-width: 408px) {
+    width: 280px;
   }
 `;
 

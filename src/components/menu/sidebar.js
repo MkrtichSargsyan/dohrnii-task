@@ -23,7 +23,11 @@ function Sidebar({ isActive, closeSidebar }) {
           <Logo />
         </LogoContainer>
         <MenuContainer>
-          <ClosingIcon onClick={() => closeSidebar(false)} />
+          <ClosingIcon
+            onClick={() => {
+              closeSidebar(false);
+            }}
+          />
         </MenuContainer>
       </SidebarMenuContainer>
       <SidebarDataContainer>

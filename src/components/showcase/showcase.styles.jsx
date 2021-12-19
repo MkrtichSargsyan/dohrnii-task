@@ -15,6 +15,11 @@ export const Title = styled.h1`
   letter-spacing: 4px;
   letter-spacing: 4px;
   margin-bottom: 60px;
+
+  @media (max-width: 408px) {
+    font-size: 32px;
+  }
+  
 `;
 
 export const Info = styled.p`

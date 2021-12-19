@@ -16,8 +16,7 @@ function App() {
       className={`${isMoved ? 'gif-background' : 'svg-background '}`}
       onMouseMove={() => setIsMoved(true)}
     >
-      {isActive && <Sidebar isActive closeSidebar={setIsActive} />}
-      {/* <Sidebar isActive closeSidebar={setIsActive} /> */}
+      <Sidebar isActive={isActive} closeSidebar={setIsActive} />
       <Header openSidebar={setIsActive} />
       <Switch>
         <Route exact path="/" component={MainPage} />

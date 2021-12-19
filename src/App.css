@@ -16,16 +16,17 @@ body {
   height: 100%;
   max-width: 1600px;
   margin: 0 auto;
-  /* background-image: url('./assets/bg.svg'); */
   color: white;
 }
 
 .gif-background {
+  overflow: hidden;
   height: 100%;
   background-image: url('./assets/bg1.gif');
 }
 
 .svg-background {
+  overflow: hidden;
   background-image: url('./assets/bg.svg');
 }
 

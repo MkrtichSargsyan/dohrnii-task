@@ -1,20 +1,17 @@
 import styled, { css } from 'styled-components';
 
-const activeSidebar = css`
+const activeStyle = css`
+  left: 0;
   right: 0;
-  background: linear-gradient(
-    168.57deg,
-    rgba(61, 58, 65, 0.06) -15.67%,
-    rgba(8, 2, 34, 0.24) 105.87%
-  );
-  ${'' /* backdrop-filter: blur(80px); */}
-  filter: blur(80px);
-  -webkit-filter: blur(80px);
-  transition: 1000ms;
 `;
 
-const makeSidebarActiveAgain = (props) => {
-  return props.active ? activeSidebar : null;
+const notActiveStyle = css`
+  left: 100%;
+  right: -100%;
+`;
+
+const makeSidebarActive = (props) => {
+  return props.active ? activeStyle : notActiveStyle;
 };
 
 export const SidebarContainer = styled.section`
@@ -22,11 +19,15 @@ export const SidebarContainer = styled.section`
   position: absolute;
   height: 836px;
   padding-top: 30px;
-  left: 0;
-  box-sizing: border-box;
-  right: -100%;
+  background: linear-gradient(
+    168.57deg,
+    rgba(61, 58, 65, 0.06) -15.67%,
+    rgba(8, 2, 34, 0.24) 105.87%
+  );
+  backdrop-filter: blur(80px);
+  transition: 1s;
 
-  ${makeSidebarActiveAgain}
+  ${makeSidebarActive}
 `;
 
 export const SidebarMenuContainer = styled.div`
