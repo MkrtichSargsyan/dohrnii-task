@@ -1,20 +1,32 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const SidebarContainer = styled.section`
-  position: absolute;
-  height: 836px;
-  left: 0;
+const activeSidebar = css`
   right: 0;
-  /* top: -9px; */
-  z-index: 100;
   background: linear-gradient(
     168.57deg,
     rgba(61, 58, 65, 0.06) -15.67%,
     rgba(8, 2, 34, 0.24) 105.87%
   );
-  /* border: 1px solid rgba(255, 255, 255, 0.3); */
+  ${'' /* backdrop-filter: blur(80px); */}
+  filter: blur(80px);
+  -webkit-filter: blur(80px);
+  transition: 1000ms;
+`;
+
+const makeSidebarActiveAgain = (props) => {
+  return props.active ? activeSidebar : null;
+};
+
+export const SidebarContainer = styled.section`
+  z-index: 100;
+  position: absolute;
+  height: 836px;
+  padding-top: 30px;
+  left: 0;
   box-sizing: border-box;
-  backdrop-filter: blur(80px);
+  right: -100%;
+
+  ${makeSidebarActiveAgain}
 `;
 
 export const SidebarMenuContainer = styled.div`
@@ -35,10 +47,10 @@ export const SidebarItem = styled.p`
   letter-spacing: 4px;
   width: 230px;
   font-weight: 900;
-  font-size: 30px;
+  font-size: 28px;
   line-height: 28px;
   text-align: right;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 `;
 
 export const SidebarButtonContainer = styled.div`

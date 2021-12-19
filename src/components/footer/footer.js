@@ -8,7 +8,8 @@ import { ReactComponent as InstagramIcon } from '../../assets/instagramIcon.svg'
 import { ReactComponent as TictocIcon } from '../../assets/tiktokIcon.svg';
 
 const FooterContainer = styled.footer`
-  margin: 30px 40px 100px;
+  margin: 30px 40px;
+  padding-bottom: 100px;
   display: flex;
   justify-content: space-between;
 `;

@@ -2,10 +2,9 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
-  padding-top: 40px;
+  padding-top: 30px;
   height: 120px;
   width: 100%;
-  border-bottom:1px solid white;
   display: flex;
   justify-content: space-between;
 `;

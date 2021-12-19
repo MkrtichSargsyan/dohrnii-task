@@ -6,11 +6,33 @@
   position: relative;
 }
 
+html{
+  height: 100%;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   width: 100%;
+  height: 100%;
   max-width: 1600px;
   margin: 0 auto;
-  background-color: black;
+  /* background-image: url('./assets/bg.svg'); */
   color: white;
+}
+
+.gif-background {
+  height: 100%;
+  background-image: url('./assets/bg1.gif');
+}
+
+.svg-background {
+  background-image: url('./assets/bg.svg');
+}
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
 }

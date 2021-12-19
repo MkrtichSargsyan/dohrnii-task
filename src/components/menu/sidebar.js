@@ -15,15 +15,15 @@ import { ReactComponent as ClosingIcon } from '../../assets/x.svg';
 
 import { SIDEBAR_DATA } from './sidebar-data';
 
-function Menu() {
+function Sidebar({ isActive, closeSidebar }) {
   return (
-    <SidebarContainer>
+    <SidebarContainer active={isActive}>
       <SidebarMenuContainer>
         <LogoContainer to={'/'}>
           <Logo />
         </LogoContainer>
-        <MenuContainer to={'/'}>
-          <ClosingIcon />
+        <MenuContainer>
+          <ClosingIcon onClick={() => closeSidebar(false)} />
         </MenuContainer>
       </SidebarMenuContainer>
       <SidebarDataContainer>
@@ -40,4 +40,4 @@ function Menu() {
   );
 }
 
-export default Menu;
+export default Sidebar;
